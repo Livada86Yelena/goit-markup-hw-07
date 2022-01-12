@@ -60,6 +60,14 @@
 .our-work__list-images > .our-work__item {
   position: relative;
 }
+.our-work__list-images > .our-work__item:not(:last-child) {
+  margin-right: 30px;
+}
+.our-work__list-images {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .our-work__text {
   position: absolute;
   display: flex;
@@ -124,17 +132,6 @@
   padding-bottom: 30px;
 }
 
-.links-social__network {
-  display: block;
-  fill: #afb1b8;
-  border-color: var(--accent-color);
-  background-color: rgba(255, 255, 255, 0.1);
-}
-.socialn {
-  display: block;
-  fill: #afb1b8;
-  background-color: rgba(255, 255, 255, 0.1);
-}
 .icon {
   display: flex;
 }
@@ -147,10 +144,17 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  fill: #afb1b8;
 
   transition-property: var(--accent-color);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    fill: #fff;
+    background-color: var(--accent-color);
+  }
 }
 .socialn {
   display: flex;
@@ -161,25 +165,25 @@
   height: 44px;
   border-radius: 50%;
 
+  fill: #afb1b8;
+  background-color: rgba(255, 255, 255, 0.1);
+
   transition-property: var(--accent-color);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover {
+  &:hover,
+  &:focus {
     fill: #ffffff;
+    background-color: var(--accent-color);
   }
 }
-
-.social:hover,
-&:focus {
-  fill: #ffffff;
-  background-color: var(--accent-color);
+.team-list {
+  display: flex;
 }
-.socialn:hover,
-&:focus {
-  fill: #ffffff;
-  background-color: var(--accent-color);
+.team-list__item:not(:last-child) {
+  margin-right: 30px;
+  padding-bottom: 30px;
 }
-
 .team-list__name {
   font-family: Roboto;
   font-weight: 500;
@@ -189,9 +193,6 @@
   letter-spacing: 0.03em;
   color: #212121;
   margin-top: 30px;
-  &:hover {
-    color: var(--accent-color);
-  }
 }
 
 .team-list__proffession {
@@ -202,9 +203,6 @@
   text-align: center;
   letter-spacing: 0.03em;
   color: #757575;
-  &:hover {
-    color: var(--accent-color);
-  }
 }
 
 .regular-customers {

@@ -12,13 +12,12 @@
   transition-property: var(--accent-color);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
-&:hover .studio {
-  color: var(--accent-color);
-}
-&:focus .studio {
-  color: var(--accent-color);
-}
+
 .web {
   color: #2196f3;
 }
@@ -35,7 +34,9 @@
     margin-left: 93px;
   }
 }
-
+.site-nav-list > .item {
+  margin-left: 50px;
+}
 .header-page {
   display: flex;
   align-items: center;
