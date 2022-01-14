@@ -37,11 +37,13 @@
   letter-spacing: 0.06em;
   padding: 10px 32px;
   margin: 30px auto 0 auto;
+  border: none;
 }
 .button-block__button {
   transition-property: var(--accent-color);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
   &:hover,
   &:focus {
     color: var(--primery-white-color);
@@ -50,7 +52,6 @@
       0px 2px 2px rgba(0, 0, 0, 0.12);
   }
 }
-
 .button-block__button-portfolio-one {
   transition-property: var(--accent-color);
   transition-duration: 250ms;
